@@ -1,81 +1,131 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ultimate Life</title>
-  <link rel="stylesheet" href="/css/style.css">
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultimate Life (UL)</title>
 
-  
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Manrope:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/header.js"></script>
+  </head>
 
-  <div class="container">
-
+  <body>
     <!-- HEADER -->
-    <header>
-      <div class="logo">Ultimate Life</div>
-      <a href="#courses" class="btn">الكورسات</a>
-    </header>
+    <div id="header"></div>
 
     <!-- HERO -->
     <section class="hero">
-      <h1>طور مهاراتك وابني مستقبلك بنفسك</h1>
-      <p>
-        برامج تدريبية عملية تساعدك تبدأ من الصفر وتوصل لنتيجة حقيقية
-      </p>
-      <a href="#courses" class="btn">ابدأ الآن</a>
-    </section>
-
-    <!-- COURSES -->
-    <section id="courses" class="courses">
-      <h2>الكورسات المتاحة</h2>
-
-      <div class="course-grid">
-
-        <!-- COURSE 1 -->
-        <div class="course-card">
-          <span class="badge">🔴 Live</span>
-          <h3>Web Launchpad</h3>
-          <p>تعلم بناء مواقع الويب من الصفر وتنفيذ مشروعك الخاص</p>
-          <div class="price">4500 جنيه</div>
-          <a href="#" class="btn">عرض التفاصيل</a>
+      <div class="container hero-grid">
+        <div>
+          <h1>إبدأ مستقبلك بتعلم مهارات حقيقة</h1>
+          <p>برامج تدريب مصممة لتجعلك تحصل على نتائج واقعية</p>
+          <a href="#courses" class="btn">اكتشف الكورسات</a>
         </div>
 
-        <!-- COURSE 2 -->
-        <div class="course-card">
-          <span class="badge">🟢 Coming Soon</span>
-          <h3>AI Tools</h3>
-          <p>استخدم الذكاء الاصطناعي لزيادة إنتاجيتك</p>
-          <div class="price">—</div>
-          <a href="#" class="btn">قريبًا</a>
+        <div>
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj3CaVFLQwtKRBbphQiV5ZeM6O_s32gHDn_M5TwodLV5PhUxtK5G9r8akqSA6r_PTJ_05_NDj_oM23w7Q6NjXQInjl-vrDN1qb4D7dHx8jsKV3hjD7DLnAk23wiEgvihY8OdHGfjY3wROc5upEEXsJGLpppUkbcVWRNd6dNKgzVXp5VemQrx25XeK2stDTyyfadJhHd4xV4P6v3s6ub0GpTGowVD_bsdgbnwJRAUdBFYSu31f3nidWbBFPuLeGUmGb3ElWbiJoSe4q"
+          />
         </div>
-
-        <!-- COURSE 3 -->
-        <div class="course-card">
-          <span class="badge">🟢 Coming Soon</span>
-          <h3>Freelancing Basics</h3>
-          <p>ابدأ العمل الحر من الصفر وابني أول دخل لك</p>
-          <div class="price">—</div>
-          <a href="#" class="btn">قريبًا</a>
-        </div>
-
       </div>
     </section>
 
+    <!-- COURSES -->
+    <section class="courses" id="courses">
+      <div class="container">
+        <h2 style="padding-bottom: 12px">الكورسات</h2>
+
+        <div class="course-grid">
+          <div class="card">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC3pwUGpzbMLGyGqNCP0211A-j1HPghwXEjPlD5If_G8iB-KXlu0v1c4yoeQvCWHF6zTYcHWL8sL8hifyTIoMtYvSB8iK8J1xavwuym3SpnGLLFms-duYLtkVSteoa1u5A0ZCs5CCV27jECqybDRWGt6V8bsbjlJ5Eemx2WuNykD_LmzjHKD8WVEKfYcNfQyM0bHvIYUTJzn61u-tIzwJJN7RkiqmrcAkP4bDpu6b7pcs6_FrfaANUaDIOHQjfQbazWymj_9CUTJRX"
+            />
+            <div class="card-content">
+              <span class="badge">Live</span>
+              <h3>Web Launchpad</h3>
+              <p>Learn web development from scratch</p>
+              <div class="price-tags">
+                <div class="price discount">499 EGP</div>
+                <div class="price">200 EGP</div>
+              </div>
+              <a href="/course-template">
+                <button class="btn course-details">التفاصيل</button>
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="pics/course-temp.jpg" />
+            <div class="card-content">
+              <span class="badge">Type</span>
+              <h3>Course Name</h3>
+              <p>Description</p>
+              <div class="price-tags">
+                <div class="price discount">499 EGP</div>
+                <div class="price">200 EGP</div>
+              </div>
+              <a href="/course-template">
+                <button class="btn course-details">Details</button>
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="pics/course-temp.jpg" />
+            <div class="card-content">
+              <span class="badge">Type</span>
+              <h3>Course Name</h3>
+              <p>Description</p>
+              <div class="price-tags">
+                <div class="price discount">499 EGP</div>
+                <div class="price">200 EGP</div>
+              </div>
+              <a href="/course-template">
+                <button class="btn course-details">Details</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta" id="features">
+      <h2>لماذا تختار Ultimate Life؟</h2>
+      <ul>
+        <li>برامج تدريب حقيقية</li>
+        <li>تطبيق عملي خطوة بخطوة</li>
+        <li>ورشات عمل ودعم مباشر</li>
+        <li>مشروع تخرج ونظام تقييم</li>
+      </ul>
+    </section>
+    <br />
+
+    <section class="courses">
+      <div class="container contact">
+        <h2 style="padding-bottom: 12px">إختار طريقة التواصل</h2>
+        <div class="cards-contact">
+          <div class="card card-contact">
+            <h3>Whatsapp</h3>
+            <button class="btn">إرسال رسالة</button>
+          </div>
+          <div class="card card-contact">
+            <h3>Facebook</h3>
+            <button class="btn">إرسال رسالة</button>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- CTA -->
     <section class="cta">
-      <h2>عدد الأماكن محدود في البرامج المباشرة</h2>
-      <a href="#" class="btn">احجز مكانك الآن</a>
+      <h2>إبدأ رحتلك الان</h2>
+      <a href="#" class="btn">احجز مكانك</a>
     </section>
 
     <!-- FOOTER -->
-    <footer>
-      © 2026 Ultimate Life
-    </footer>
-
-  </div>
-
-</body>
+    <footer>© 2026 Ultimate Life</footer>
+  </body>
 </html>

@@ -1,181 +1,238 @@
+/* ===== ROOT ===== */
 :root {
-  --bg: #f7f9fc;
-  --card: #ffffff;
   --primary: #00a8e8;
-  --primary-dark: #0077b6;
-
-  --text: #0f172a;
-  --muted: #64748b;
-
+  --bg: #f6faff;
+  --text: #171c20;
+  --muted: #3e4850;
+  --card: #ffffff;
   --border: #e2e8f0;
-  --shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
-/* Reset + Smooth */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
-  transition: all 0.2s ease;
-}
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 body {
+  font-family: "Manrope", sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
 }
 
+/* CONTAINER */
 .container {
-  width: 100%;
+  max-width: 1200px;
   margin: auto;
+  padding: 0 20px;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid var(--border);
-  z-index: 1000;
-  gap: 65%;
+}
+
+.nav {
   display: flex;
-  justify-content: space-around;
-  padding: 20px 0;
+  justify-content: space-between;
   align-items: center;
+  height: 70px;
 }
 
 .logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: var(--text);
+  font-weight: 700;
+  font-size: 20px;
 }
 
-/* ================= BUTTON ================= */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+}
+
 .btn {
   background: var(--primary);
   color: #fff;
-  padding: 3px 13px;
-  border-radius: 10px;
+  padding: 10px 18px;
+  border-radius: 20px;
   text-decoration: none;
   font-weight: 600;
-  display: inline-block;
-  box-shadow: var(--shadow);
+  border: none;
 }
-
 .btn:hover {
-  background: var(--primary-dark);
-  transform: translateY(-2px);
+  opacity: 0.5;
+  cursor: pointer;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 .hero {
-  text-align: center;
-  padding: 100px 0;
-  background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+  padding: 120px 0 80px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
 }
 
 .hero h1 {
-  font-size: 44px;
+  font-size: 42px;
   margin-bottom: 20px;
 }
 
 .hero p {
   color: var(--muted);
-  font-size: 18px;
-  margin-bottom: 30px;
-  max-width: 600px;
-  margin-inline: auto;
+  margin-bottom: 20px;
 }
 
-/* ================= COURSES ================= */
+.hero img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* COURSES */
 .courses {
-  margin: 80px 0;
-  padding: 20px;
-}
-
-.courses h2 {
-  text-align: center;
-  margin-bottom: 40px;
+  padding: 60px 0;
+  background: #f1f5f9;
 }
 
 .course-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-
-/* CARD */
-.course-card {
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.card-contact {
+  width: fit-content;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+}
+.cards-contact {
+  display: flex;
+  gap: 15px;
+}
+.card {
   background: var(--card);
-  padding: 24px;
   border-radius: 16px;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-.course-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
 }
 
-.course-card:hover h3 {
-  color: var(--primary);
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  direction: ltr;
 }
 
-.course-card h3 {
-  margin-bottom: 10px;
-}
-
-.course-card p {
-  color: var(--muted);
-  margin-bottom: 15px;
-}
-
-/* BADGE */
 .badge {
+  background: var(--primary);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
   font-size: 12px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  display: inline-block;
-  margin-bottom: 12px;
-  background: #e0f2fe;
-  color: #0284c7;
-  font-weight: 600;
+  width: fit-content;
 }
 
-/* PRICE */
 .price {
-  font-size: 22px;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  color: var(--primary);
+  font-size: 20px;
+}
+.discount {
+  text-decoration: line-through;
+  text-decoration-thickness: from-font;
+  text-decoration-color: red;
+  color: #726a6a;
+  font-weight: 100;
+  font-size: 15px;
+}
+.price-tags {
+  display: flex;
+  flex-direction: column;
 }
 
-/* ================= CTA ================= */
+/* CTA */
 .cta {
+  padding: 80px 0;
   text-align: center;
-  margin: 100px 0;
-  padding: 40px;
-  background: var(--card);
-  border-radius: 16px;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
+  background: #0f172a;
+  color: #fff;
 }
 
 .cta h2 {
+  font-size: 32px;
   margin-bottom: 20px;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 footer {
+  padding: 40px;
   text-align: center;
-  padding: 40px 0;
-  color: var(--muted);
+  font-size: 14px;
+  color: #64748b;
+}
+.course-details {
+  width: 50%;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+::marker {
+  list-style-type: revert-layer;
+}
+@media only screen and (max-width: 480px) {
+  .card {
+    width: 21pc;
+  }
+  .btn {
+    text-align: center;
+    width: fit-content;
+    height: auto;
+  }
+  * {
+    width: 100%;
+  }
+  .course-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-contact {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+  }
 }
